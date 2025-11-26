@@ -1,5 +1,5 @@
 ## Структура проекта
-
+```
 sql-online-store/
 docs/
    ├── conceptual.md
@@ -7,29 +7,30 @@ docs/
    └── physical.md
 db/
    migrations/
-       ├── 001_schemas.sql
-       ├── 010_tables.sql
-       ├── 020_constraints_indexes.sql
-       └── 030_views.sql
+       ├── schemas.sql
+       ├── tables.sql
+       ├── constraints_indexes.sql
+       └── views.sql
    seed/
-       ├── 001_refs.sql
-       ├── 010_customers.sql
-       ├── 020_products.sql
-       └── 030_orders_items.sql
+       ├── refs.sql
+       ├── customers.sql
+       ├── products.sql
+       └── orders_items.sql
 analytics/
    ├── daily_revenue.sql
    ├── funnel.sql
    ├── rfm.sql
    └── cohorts.sql
 README.md
+```
 
 
 ## О проекте
 Мини-датастор для интернет-магазина
-- клиенты с источниками привлечения,
-- товары и категории,
-- заказы и позиции заказов,
-- оплаты банковской картой или наличными,
+- клиенты с источниками привлечения;
+- товары и категории;
+- заказы и позиции заказов;
+- оплаты банковской картой или наличными;
 - доставки по городам.
 
 ## Как запустить
@@ -38,17 +39,21 @@ README.md
 CREATE DATABASE online_store;
 ```
 
-### 2. Выполнение миграции
+### 2. Выполнение миграции (поэтапно)
+```
 db/migrations/schemas.sql
 db/migrations/tables.sql
 db/migrations/constraints_indexes.sql
 db/migrations/views.sql
+```
 
-### 3. Заполнение базы данных
+### 3. Заполнение базы данных (поэтапно)
+```
 db/seed/001_refs.sql
 db/seed/010_customers.sql
 db/seed/020_products.sql
 db/seed/030_orders_items.sql
+```
 
 ## Аналитика
 
@@ -92,5 +97,6 @@ db/seed/030_orders_items.sql
 
 ### `physical.md`  
 Типы данных, индексы, ограничения и логика.
+
 
 
