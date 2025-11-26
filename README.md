@@ -1,31 +1,28 @@
 ## Структура проекта
 
 sql-online-store/
-├── docs/ # документация по модели данных
-│ ├── conceptual.md
-│ ├── logical.md
-│ └── physical.md
-│
-├── db/
-│ ├── migrations/ # схемы, таблицы, связи, витрины
-│ │ ├── schemas.sql
-│ │ ├── tables.sql
-│ │ ├── constraints_indexes.sql
-│ │ └── views.sql
-│ │
-│ └── seed/ # заполнение базы тестовыми данными
-│ ├── refs.sql
-│ ├── customers.sql
-│ ├── products.sql
-│ └── orders_items.sql
-│
-├── analytics/ # аналитические запросы
-│ ├── daily_revenue.sql
-│ ├── funnel.sql
-│ ├── rfm.sql
-│ └── cohorts.sql
-│
-└── README.md
+docs/
+   ├── conceptual.md
+   ├── logical.md
+   └── physical.md
+db/
+   migrations/
+       ├── 001_schemas.sql
+       ├── 010_tables.sql
+       ├── 020_constraints_indexes.sql
+       └── 030_views.sql
+   seed/
+       ├── 001_refs.sql
+       ├── 010_customers.sql
+       ├── 020_products.sql
+       └── 030_orders_items.sql
+analytics/
+   ├── daily_revenue.sql
+   ├── funnel.sql
+   ├── rfm.sql
+   └── cohorts.sql
+README.md
+
 
 ## О проекте
 Мини-датастор для интернет-магазина
@@ -33,7 +30,7 @@ sql-online-store/
 - товары и категории,
 - заказы и позиции заказов,
 - оплаты банковской картой или наличными,
-- доставки по городам РФ.
+- доставки по городам.
 
 ## Как запустить
 ### 1. Создание базы
@@ -95,4 +92,5 @@ db/seed/030_orders_items.sql
 
 ### `physical.md`  
 Типы данных, индексы, ограничения и логика.
+
 
